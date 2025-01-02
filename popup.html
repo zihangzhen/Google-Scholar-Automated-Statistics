@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; }
+    label { margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <label for="showMoreWait">Show More Wait (ms):</label>
+  <input type="number" id="showMoreWait" name="showMoreWait"><br><br>
+
+  <label for="afterExpandWait">After Expand Wait (ms):</label>
+  <input type="number" id="afterExpandWait" name="afterExpandWait"><br><br>
+
+  <label for="minimalDisplay">Minimal Display:</label>
+  <input type="checkbox" id="minimalDisplay" name="minimalDisplay"><br><br>
+
+  <label>
+  <input type="checkbox" id="debug-checkbox"> Enable Debugging
+  </label>
+
+  <button id="save">Save</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

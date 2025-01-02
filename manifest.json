@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Google Scholar Automated Statistics",
+  "version": "2.0",
+  "description": "Google Scholar Automated Statistics based on easyscholar by Zihang Zhen(zzihang@foxmail.com).",
+  "author": "Zihang Zhen",
+   "icons": {
+    "16": "icon256x256.png",
+    "48": "icon256x256.png",
+    "128": "icon256x256.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://scholar.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://scholar.google.com/*",
+        "https://scholar.google.com.tw/*",
+        "https://scholar.google.co.jp/*",
+        "https://scholar.google.co.uk/*",
+        "https://scholar.google.com.au/*",
+        "https://scholar.google.com.sg/*",
+        "https://scholar.google.de/*",
+        "https://scholar.google.ca/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
